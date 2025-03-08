@@ -1,0 +1,41 @@
+import { Card, Row, Col, Container } from "react-bootstrap";
+import { FaUsers, FaFileAlt, FaDatabase } from "react-icons/fa";
+
+const Dashboard = () => {
+  return (
+    <Container className="mt-4">
+      <h2 className="mb-4">Dashboard</h2>
+      <Row>
+        <Col md={4}>
+          <Card className="shadow-sm p-3 mb-4">
+            <Card.Body>
+              <FaUsers size={30} className="text-primary" />
+              <h5 className="mt-2">Total Users</h5>
+              <h3>150</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className="shadow-sm p-3 mb-4">
+            <Card.Body>
+              <FaFileAlt size={30} className="text-success" />
+              <h5 className="mt-2">Total Documents</h5>
+              <h3>320</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className="shadow-sm p-3 mb-4">
+            <Card.Body>
+              <FaDatabase size={30} className="text-warning" />
+              <h5 className="mt-2">Storage Used</h5>
+              <h3>25 GB</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Dashboard;
